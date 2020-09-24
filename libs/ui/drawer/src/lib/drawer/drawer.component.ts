@@ -180,7 +180,10 @@ export class TsDrawerComponent implements AfterContentChecked, OnDestroy {
    */
   @Input()
   public set isExpanded(value: boolean) {
-    this.toggle(value);
+    Promise.resolve().then(() => {
+      this._isExpanded = value;
+      this.toggle(value);
+    });
   }
   public get isExpanded(): boolean {
     return this._isExpanded;
