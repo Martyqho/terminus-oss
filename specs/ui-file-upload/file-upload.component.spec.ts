@@ -645,15 +645,6 @@ describe(`TsFileUploadComponent`, function() {
     });
   });
 
-  describe(`theme`, () => {
-    test(`should set the theme`, () => {
-      hostComponent.theme = 'warning';
-      fixture.detectChanges();
-
-      expect(component.theme).toEqual('warning');
-    });
-  });
-
   describe(`formControl`, () => {
     test(`should fall back to internal control if one is not passed in`, () => {
       component.formControl = undefined as any;
